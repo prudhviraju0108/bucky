@@ -17,7 +17,8 @@ def handle(msg):
     print msg
 
     if content_type == 'text':
-	if msg['text'] == 'Hi Bucky':
+	request = msg['text']
+	if request == 'Hi Bucky' or request == 'hi' or request == 'HI' or request == 'Hi' or request == 'hey' or request == 'Hey':
 		bot.sendMessage(chat_id,'Hi kp')
 	if msg['text'] == 'who are you?':
 		bot.sendMessage(chat_id,'Hey bud this is ' + bot_name)
